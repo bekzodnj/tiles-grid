@@ -33,7 +33,7 @@ for (let i = 0; i < 5; i++) {
 
 let row = 0;
 let col = 0;
-let myTimer = setInterval(paintTile, 200);
+let myTimer = setInterval(paintTile, 150);
 
 function paintTile() {
   if (row > 4) {
@@ -42,11 +42,10 @@ function paintTile() {
     if (col > 4) {
       row++;
       col = 0;
-      console.log('Timer', myTimer);
     } else {
+      console.log('row:col', row, col);
       tilesArr[row][col].style.backgroundColor = 'slateblue';
       col++;
-      console.log('Timer', myTimer);
     }
   }
 }
