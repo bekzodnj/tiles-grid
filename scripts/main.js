@@ -1,21 +1,3 @@
-let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
-//1536x722
-
-console.log(windowHeight, windowWidth);
-
-let tileWidth = windowWidth / 5;
-let tileHeight = windowHeight / 5;
-
-console.log(tileWidth, tileHeight);
-window.onresize = function () {
-  windowWidth = window.innerWidth;
-  windowHeight = window.innerHeight;
-
-  tileWidth = windowWidth / 5;
-  tileHeight = windowHeight / 5;
-};
-
 const tile_container = document.getElementsByClassName('tile-container')[0];
 
 const tilesArr = [];
@@ -43,9 +25,31 @@ function paintTile() {
       row++;
       col = 0;
     } else {
-      console.log('row:col', row, col);
       tilesArr[row][col].style.backgroundColor = 'slateblue';
       col++;
     }
   }
 }
+
+/*
+
+  // Controlling height and width using JS
+  // Archived because of vh, vw in CSS
+  
+  let windowWidth = window.innerWidth;
+  let windowHeight = window.innerHeight;
+
+  let tileWidth = windowWidth / 5;
+  let tileHeight = windowHeight / 5;
+
+  console.log(tileWidth, tileHeight);
+  window.onresize = function () {
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
+
+  tileWidth = windowWidth / 5;
+  tileHeight = windowHeight / 5;
+};
+
+
+*/

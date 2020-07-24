@@ -17,11 +17,8 @@
 
 .tile {
   width: 20%;
-  height: 144.4px;
+  height: 20vh;
   background-color: skyblue;
   border: 1px solid white;
-  transition: all 0.4s ease-in;
-}
-.blue {
-  background-color: slateblue;
+  transition: background-color 0.4s ease-in, height 0.2s ease-in;
 }
